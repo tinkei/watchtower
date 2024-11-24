@@ -1,5 +1,6 @@
 import json
 import os
+from pathlib import Path
 from pprint import pprint
 from typing import Optional
 
@@ -61,4 +62,9 @@ def fetch_many() -> Optional[list[dict]]:
 
 if __name__ == "__main__":
     norad_id = 25544  # Example: ISS
-    fetch_one(id=norad_id)
+    satellite_data = fetch_one(id=norad_id)
+
+    data_path = Path("./data")
+    data_path.mkdir(parents=True, exist_ok=True)
+    with open(data_path / f"result_{norad_id}.json", "w") as fp:
+        json.dump(satellite_data, fp, indent=4)

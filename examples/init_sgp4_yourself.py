@@ -3,7 +3,7 @@
 from sgp4 import exporter
 from sgp4.api import WGS72, Satrec
 
-from watchtower.calculation.unit_conversion import (
+from watchtower.calculation import (
     convert_revolutions_per_day_cubed_to_radians_per_minute_cubed,
     convert_revolutions_per_day_squared_to_radians_per_minute_squared,
 )
