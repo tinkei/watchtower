@@ -7,10 +7,12 @@ This repo contains example scripts to:
 - Query ESA DOSCOS API for object dimensions (among other things).
 - Query Space-Track API for object TLE (Two-Line Element set).
 - Load TLE into SGP4 model (a Simplified General Perturbations model).
-- Propagate TLE in SGP4 model to current epoch.
-- Transform SGP4 model output to observer coordinates (ECI, ENU).
-- Calculate relative velocities.
+- Propagate TLE in SGP4 model to current epoch, or until the satellites are in the vicinity.
+- Transform the position of ground observer in Europe to ECI / TEME coordinate.
+- Calculate relative velocities in inertial frame and decompose into radial and tangential components.
 - Compute expected Doppler shift.
+
+The next step will be to compare this expected Doppler shift with real-world measurement to validate the idea.
 
 ## Set up
 
